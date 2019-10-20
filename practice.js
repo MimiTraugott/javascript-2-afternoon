@@ -18,7 +18,6 @@ let me = {
   name: 'Mimi',
   age: 37
 }
-
 me.name
 
 ////////// PROBLEM 2 //////////
@@ -27,14 +26,13 @@ me.name
   Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
-
-let favoriteThings = {
-  band: 'Shook Twins',
-  food: 'Indian Food',
-  person: 'Rob',
-  book: 'If Women Were Birds',
-  movie: 'Shawshank Redemption',
-  holiday: 'Thanksgiving'
+favoriteThings = {
+  band: "Shook Twins",
+  food: "Cookies",
+  person: "Rob",
+  book: "When Women Were Birds",
+  movie: "Harry Potter",
+  holiday: "Thanksgiving"
 }
 
 /*
@@ -68,8 +66,10 @@ console.log(favoriteThings)
 let backPack = {}
 let item = 'firstPocket'
 
-backPack[item] = 'chapstick'
-backPack.color = 'green'
+backPack = {
+  [item]: "chapstick" 
+}
+  backPack.color = "green"
 
 /*
   After you do the above, alert your entire backPack object.
@@ -97,13 +97,11 @@ var user2 = {
   username: 'bryansmith33'
 };
 // Do not edit the code above.
-
 /*
   Let's say I, the user, decided to change my name and email address to the following:
   name -> 'Bryan G. Smith' and email -> 'bryan.smith@devmounta.in'.
   Make that change without modifying the original object code above.
 */
-
 user2.name = 'Bryan G. Smith'
 user2.email = 'bryan.smith@devmounta.in'
 
@@ -115,40 +113,53 @@ console.log(user2)
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
 ////////// PROBLEM 5 //////////
-
 /*
   Create an empty object called methodCollection.
 */
-
-//Code Here
-
+//Code here**
+methodCollection = {}
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
-
 //Code Here
-
+methodCollection = {
+  alertHello (){
+    alert("Hello");
+  }, 
+  logHello () {
+    console.log("Hello");
+  } 
+}
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+// methodCollection.alertHello()
+// methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
-
 /*
   Create a function called makePerson which takes in name, birthday, ssn as its parameters.
   Return a new object with all of the information that you passed in.
 */
-
 //Code Here
-
+function makePerson (name, birthday, ssn) {
+  return {
+      name: name,
+      birthday: birthday,
+      ssn: ssn
+    }
+  }
 ////////// PROBLEM 7 //////////
-
 /*
   Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object.
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
-
-//Code Here
+function makeCard (cardNumber, expirationDate, securityCode) {
+  return  {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
